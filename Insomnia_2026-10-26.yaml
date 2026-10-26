@@ -1,0 +1,175 @@
+type: collection.insomnia.rest/5.0
+name: Biblioteca P2
+meta:
+  id: wrk_98a2f01f3f104bf1a95d89afe26e11b2
+  created: 1793025815600
+  modified: 1793025815600
+collection:
+  - name: Book
+    meta:
+      id: fld_ef4d2e04295b4774b249d777f37f1f24
+      created: 1793025826752
+      modified: 1793025826752
+      sortKey: -1793025826752
+    children:
+      - url: http://localhost:8081/books
+        name: Create
+        meta:
+          id: req_29c9f0262c6b40c0b38b24830e2e5f98
+          created: 1793025830161
+          modified: 1793026873747
+          isPrivate: false
+          description: |-
+            {
+              "title": "Dom Casmurro",
+              "author": "Machado de Assis",
+              "genre": "Romance",
+              "publicationYear": 1899,
+              "readingStatus": "READ"
+            }
+
+            {
+              "title": "O Pequeno Príncipe",
+              "author": "Antoine de Saint-Exupéry",
+              "genre": "Fábula",
+              "publicationYear": 1943,
+              "readingStatus": "NOT_READ"
+            }
+
+            {
+              "title": "1984",
+              "author": "George Orwell",
+              "genre": "Distopia",
+              "publicationYear": 1949,
+              "readingStatus": "READING"
+            }
+          sortKey: -1793025861941
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "title": "1984",
+              "author": "George Orwell",
+              "genre": "Distopia",
+              "publicationYear": 1949,
+              "readingStatus": "READING"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.1.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8081/books/1
+        name: Update
+        meta:
+          id: req_6948b34257ee4f7098d3e75671beee3c
+          created: 1793025839092
+          modified: 1793026114211
+          isPrivate: false
+          sortKey: -1793025861891
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "title": "Dom Casmurro - Edição Especial",
+              "author": "Machado de Assis",
+              "genre": "Literatura Brasileira",
+              "publicationYear": 1899,
+              "readingStatus": "READING"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.1.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8081/books/3
+        name: Delete
+        meta:
+          id: req_a681f430fc8f4734818e3f39068d640d
+          created: 1793025857170
+          modified: 1793026119612
+          isPrivate: false
+          sortKey: -1793025838992
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8081/books
+        name: Get All
+        meta:
+          id: req_6ec6f03ba6764bb19c9f14a82d6f936c
+          created: 1793025861841
+          modified: 1793026083134
+          isPrivate: false
+          sortKey: -1793025861841
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8081/books/1
+        name: Get By Id
+        meta:
+          id: req_a0e97e67dad54c729914f1c7de485489
+          created: 1793025940575
+          modified: 1793026099407
+          isPrivate: false
+          sortKey: -1793025850416.5
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_9ae955eafec74d80b3ded2367c3ce58d520230f3
+    created: 1793025815608
+    modified: 1793025815608
+environments:
+  name: Base Environment
+  meta:
+    id: env_9ae955eafec74d80b3ded2367c3ce58d520230f3
+    created: 1793025815605
+    modified: 1793025815605
+    isPrivate: false
